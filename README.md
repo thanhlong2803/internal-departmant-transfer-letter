@@ -12,5 +12,7 @@
 
 ![enter image description here](https://github.com/thanhlong2803/update-image/blob/main/image3/struct_diagram.png)
 
+Do you know the project internal department transfer letter has tabled the department and table employee? So per the department will many the employee. The employee position the descriptions the most important aspects of each position. The position description outlines the purpose, minimum requirements, and essential functions.
 
+![enter image description here](https://github.com/thanhlong2803/update-image/blob/main/image3/department.png)![enter image description here](https://github.com/thanhlong2803/update-image/blob/main/image3/employee.png)
 
