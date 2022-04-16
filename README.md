@@ -10,7 +10,7 @@
 
  **Below is all table created and the description for the project Internal Department Transfer Letter.**
 
-![enter image description here]((https://github.com/thanhlong2803/update-image/blob/main/image3/struct-diagram.png)
+![enter image description here](https://github.com/thanhlong2803/update-image/blob/main/image3/struct_diagram.png)
 
 
 
