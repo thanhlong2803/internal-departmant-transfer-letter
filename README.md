@@ -19,5 +19,6 @@ Finally, The table settingtransferletter description is the most important in a 
 # Create web Api For Internal Department Transfer Letter  
 Below is all net 6  created and the description for the project Internal Department Transfer Letter.
 
+![enter image description here](https://github.com/thanhlong2803/update-image/blob/main/image3/struct_api.png)
 
 
