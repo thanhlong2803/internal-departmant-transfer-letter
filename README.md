@@ -6,3 +6,11 @@
 
 ![enter image description here](https://github.com/thanhlong2803/update-image/blob/main/image3/InternalDepartment.png)
 
+# Create a table in the SQL server and write the description per table.
+
+ **Below is all table created and the description for the project Internal Department Transfer Letter.**
+
+![enter image description here](https://github.com/thanhlong2803/update-image/blob/main/image3/struct-diagram.png)
+
+
+
