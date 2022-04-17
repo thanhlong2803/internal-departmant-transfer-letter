@@ -772,6 +772,10 @@
       "be.Data/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "6.0.4",
+          "Microsoft.EntityFrameworkCore.Relational": "6.0.4"
+        },
         "compile": {
           "bin/placeholder/be.Data.dll": {}
         },

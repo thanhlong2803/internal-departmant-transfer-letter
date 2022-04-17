@@ -22,7 +22,7 @@ namespace Infrastructure
 
         public List<Department> GetAllDepartment()
         {
-            return _departmentDbcontext.Departments.ToList();
+            return _departmentDbcontext.Department.ToList();
         }
     }
 }
