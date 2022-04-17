@@ -1,0 +1,10 @@
+<div mat-dialog-title fxLayout="row" fxLayoutAlign="space-between center">
+    <div>{{Title}}</div>
+</div>
+<mat-dialog-content>
+    <div [innerHtml]="Message"></div>
+</mat-dialog-content>
+<mat-dialog-actions align="end" class="mt-3">
+    <button *ngIf="!IsDetail" mat-button (click)="close('No')">{{ButtonNo}}</button>
+    <button mat-button color="primary" (click)="close('Yes')">{{ButtonYes}}</button>
+</mat-dialog-actions>
