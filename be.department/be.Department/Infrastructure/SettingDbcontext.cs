@@ -12,8 +12,14 @@ namespace Infrastructure
         }
 
         public DbSet<Department> Department { get; set; }
-
-
+        public DbSet<be.Data.File> File { get; set; }
+        public DbSet<Employee> Employee { get; set; }
+        public DbSet<Employee_File> Employee_File { get; set; }
+        public DbSet<Employee_Role> Employee_Role { get; set; }
+        public DbSet<FileBinary> FileBinary { get; set; }
+        public DbSet<Role> Role { get; set; }
+        public DbSet<Role_Function> Role_Function { get; set; }
+        public DbSet<SettingTransferLetter> SettingTransferLetter { get; set; }
 
         //protected override void OnModelCreating(ModelBuilder modelBuilder)
         //{
