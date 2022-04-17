@@ -1,0 +1,94 @@
+{
+  "version": 3,
+  "targets": {
+    "net6.0": {
+      "be.Data/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/be.Data.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/be.Data.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "be.Data/1.0.0": {
+      "type": "project",
+      "path": "../be.department.Data/be.Data.csproj",
+      "msbuildProject": "../be.department.Data/be.Data.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net6.0": [
+      "be.Data >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\ThanhLong\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "D:\\LearnAngular\\v3-internal-department-transfer-letter\\be.department\\be.Department\\be.Department.Services\\be.Services.csproj",
+      "projectName": "be.Services",
+      "projectPath": "D:\\LearnAngular\\v3-internal-department-transfer-letter\\be.department\\be.Department\\be.Department.Services\\be.Services.csproj",
+      "packagesPath": "C:\\Users\\ThanhLong\\.nuget\\packages\\",
+      "outputPath": "D:\\LearnAngular\\v3-internal-department-transfer-letter\\be.department\\be.Department\\be.Department.Services\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\ThanhLong\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net6.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "projectReferences": {
+            "D:\\LearnAngular\\v3-internal-department-transfer-letter\\be.department\\be.Department\\be.department.Data\\be.Data.csproj": {
+              "projectPath": "D:\\LearnAngular\\v3-internal-department-transfer-letter\\be.department\\be.Department\\be.department.Data\\be.Data.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net6.0": {
+        "targetAlias": "net6.0",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

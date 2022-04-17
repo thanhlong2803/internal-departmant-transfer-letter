@@ -1,0 +1,5 @@
+D:\LearnAngular\v3-internal-department-transfer-letter\be.department\be.Department\be.Department.Services\obj\Debug\net6.0\be.Services.csproj.AssemblyReference.cache
+D:\LearnAngular\v3-internal-department-transfer-letter\be.department\be.Department\be.Department.Services\obj\Debug\net6.0\be.Services.GeneratedMSBuildEditorConfig.editorconfig
+D:\LearnAngular\v3-internal-department-transfer-letter\be.department\be.Department\be.Department.Services\obj\Debug\net6.0\be.Services.AssemblyInfoInputs.cache
+D:\LearnAngular\v3-internal-department-transfer-letter\be.department\be.Department\be.Department.Services\obj\Debug\net6.0\be.Services.AssemblyInfo.cs
+D:\LearnAngular\v3-internal-department-transfer-letter\be.department\be.Department\be.Department.Services\obj\Debug\net6.0\be.Services.csproj.CoreCompileInputs.cache

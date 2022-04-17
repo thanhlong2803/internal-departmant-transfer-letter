@@ -1,0 +1,1 @@
+D:\LearnAngular\v3-internal-department-transfer-letter\be.department\be.Department\be.Department\obj\Debug\net6.0\be.Department.csproj.AssemblyReference.cache
