@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace be.Services.Service.Employee
 {
+    //Create and Validate JWT Tokens + Use Custom JWT Middleware
     public class EmployeeService : IEmployeeService
     {
         public EmployeeService()

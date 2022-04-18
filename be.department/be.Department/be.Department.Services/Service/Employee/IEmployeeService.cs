@@ -5,6 +5,7 @@ namespace be.Services.Service.Employee
 {
     internal interface IEmployeeService
     {
+        //Create and Validate JWT Tokens + Use Custom JWT Middleware
         AuthenticateResponse Authenticate(AuthenticateRequest model);
         List<EmployeeResponse> GetEmployeeInDepartments(long departmentId);    
     }
