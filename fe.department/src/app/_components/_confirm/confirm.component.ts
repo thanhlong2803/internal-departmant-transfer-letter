@@ -1,13 +1,11 @@
 import { Component, Optional, Inject } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
-// import icClose from '@iconify/icons-ic/twotone-close';
 
 @Component({
     selector: 'app-confirm',
     templateUrl: './confirm.component.html',
 })
-export class ConfirmComponent {
-    // icClose = icClose;
+export class ConfirmComponent {;
     Title: any = null;
     Message: any = null;
     ButtonYes: string = "Yes";

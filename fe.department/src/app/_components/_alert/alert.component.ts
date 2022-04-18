@@ -10,16 +10,13 @@ import { AlertService } from 'src/app/_services/alert.service';
     }
 )
 export class AlertComponent implements OnInit, OnDestroy {
-    private subscription: Subscription;
+    private subscription: Subscription | undefined;
     message: any;
-
     constructor(private alertService: AlertService) {
 
     }
 
-    ngOnInit() {
-        //getAlert() passed signal this.subject.asObservable() 
-        //so per change it will subscription save to memory..... esay => memory leaks
+    ngOnInit() {    
         this.subscription = this.alertService.getAlert()
             .subscribe(message => {               
                 switch (message && message.type) {
@@ -37,8 +34,7 @@ export class AlertComponent implements OnInit, OnDestroy {
             });
     }
 
-    ngOnDestroy() {
-        //unsubscribe to ensure no memory leaks
-        this.subscription.unsubscribe();
+    ngOnDestroy() {   
+        this.subscription?.unsubscribe();
     }
 }
