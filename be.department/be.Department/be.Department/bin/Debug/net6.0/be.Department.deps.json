@@ -8,12 +8,12 @@
     ".NETCoreApp,Version=v6.0": {
       "be.Department/1.0.0": {
         "dependencies": {
-          "Infrastructure": "1.0.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "6.0.4",
           "Microsoft.EntityFrameworkCore.Tools": "6.0.4",
           "Microsoft.QualityTools.Testing.Fakes": "16.11.230815",
           "Swashbuckle.AspNetCore": "6.2.3",
           "be.Data": "1.0.0",
+          "be.Infrastructure": "1.0.0",
           "be.Services": "1.0.0"
         },
         "runtime": {
@@ -547,22 +547,22 @@
           "be.Data.dll": {}
         }
       },
-      "be.Services/1.0.0": {
-        "dependencies": {
-          "be.Data": "1.0.0"
-        },
-        "runtime": {
-          "be.Services.dll": {}
-        }
-      },
-      "Infrastructure/1.0.0": {
+      "be.Infrastructure/1.0.0": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "6.0.4",
           "be.Data": "1.0.0",
           "be.Services": "1.0.0"
         },
         "runtime": {
-          "Infrastructure.dll": {}
+          "be.Infrastructure.dll": {}
+        }
+      },
+      "be.Services/1.0.0": {
+        "dependencies": {
+          "be.Data": "1.0.0"
+        },
+        "runtime": {
+          "be.Services.dll": {}
         }
       }
     }
@@ -935,12 +935,12 @@
       "serviceable": false,
       "sha512": ""
     },
-    "be.Services/1.0.0": {
+    "be.Infrastructure/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
-    "Infrastructure/1.0.0": {
+    "be.Services/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

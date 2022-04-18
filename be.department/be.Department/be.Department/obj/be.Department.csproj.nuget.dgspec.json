@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\LearnAngular\\v3-internal-department-transfer-letter\\be.department\\be.Department\\be.Department\\be.Department.csproj": {}
+    "D:\\LearnAngular\\DPTL\\be.department\\be.Department\\be.Department\\be.Department.csproj": {}
   },
   "projects": {
-    "D:\\LearnAngular\\v3-internal-department-transfer-letter\\be.department\\be.Department\\be.department.Data\\be.Data.csproj": {
+    "D:\\LearnAngular\\DPTL\\be.department\\be.Department\\be.department.Data\\be.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\LearnAngular\\v3-internal-department-transfer-letter\\be.department\\be.Department\\be.department.Data\\be.Data.csproj",
+        "projectUniqueName": "D:\\LearnAngular\\DPTL\\be.department\\be.Department\\be.department.Data\\be.Data.csproj",
         "projectName": "be.Data",
-        "projectPath": "D:\\LearnAngular\\v3-internal-department-transfer-letter\\be.department\\be.Department\\be.department.Data\\be.Data.csproj",
+        "projectPath": "D:\\LearnAngular\\DPTL\\be.department\\be.Department\\be.department.Data\\be.Data.csproj",
         "packagesPath": "C:\\Users\\ThanhLong\\.nuget\\packages\\",
-        "outputPath": "D:\\LearnAngular\\v3-internal-department-transfer-letter\\be.department\\be.Department\\be.department.Data\\obj\\",
+        "outputPath": "D:\\LearnAngular\\DPTL\\be.department\\be.Department\\be.department.Data\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -71,14 +71,14 @@
         }
       }
     },
-    "D:\\LearnAngular\\v3-internal-department-transfer-letter\\be.department\\be.Department\\be.Department.Services\\be.Services.csproj": {
+    "D:\\LearnAngular\\DPTL\\be.department\\be.Department\\be.Department.Services\\be.Services.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\LearnAngular\\v3-internal-department-transfer-letter\\be.department\\be.Department\\be.Department.Services\\be.Services.csproj",
+        "projectUniqueName": "D:\\LearnAngular\\DPTL\\be.department\\be.Department\\be.Department.Services\\be.Services.csproj",
         "projectName": "be.Services",
-        "projectPath": "D:\\LearnAngular\\v3-internal-department-transfer-letter\\be.department\\be.Department\\be.Department.Services\\be.Services.csproj",
+        "projectPath": "D:\\LearnAngular\\DPTL\\be.department\\be.Department\\be.Department.Services\\be.Services.csproj",
         "packagesPath": "C:\\Users\\ThanhLong\\.nuget\\packages\\",
-        "outputPath": "D:\\LearnAngular\\v3-internal-department-transfer-letter\\be.department\\be.Department\\be.Department.Services\\obj\\",
+        "outputPath": "D:\\LearnAngular\\DPTL\\be.department\\be.Department\\be.Department.Services\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -98,8 +98,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\LearnAngular\\v3-internal-department-transfer-letter\\be.department\\be.Department\\be.department.Data\\be.Data.csproj": {
-                "projectPath": "D:\\LearnAngular\\v3-internal-department-transfer-letter\\be.department\\be.Department\\be.department.Data\\be.Data.csproj"
+              "D:\\LearnAngular\\DPTL\\be.department\\be.Department\\be.department.Data\\be.Data.csproj": {
+                "projectPath": "D:\\LearnAngular\\DPTL\\be.department\\be.Department\\be.department.Data\\be.Data.csproj"
               }
             }
           }
@@ -132,14 +132,14 @@
         }
       }
     },
-    "D:\\LearnAngular\\v3-internal-department-transfer-letter\\be.department\\be.Department\\be.Department\\be.Department.csproj": {
+    "D:\\LearnAngular\\DPTL\\be.department\\be.Department\\be.Department\\be.Department.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\LearnAngular\\v3-internal-department-transfer-letter\\be.department\\be.Department\\be.Department\\be.Department.csproj",
+        "projectUniqueName": "D:\\LearnAngular\\DPTL\\be.department\\be.Department\\be.Department\\be.Department.csproj",
         "projectName": "be.Department",
-        "projectPath": "D:\\LearnAngular\\v3-internal-department-transfer-letter\\be.department\\be.Department\\be.Department\\be.Department.csproj",
+        "projectPath": "D:\\LearnAngular\\DPTL\\be.department\\be.Department\\be.Department\\be.Department.csproj",
         "packagesPath": "C:\\Users\\ThanhLong\\.nuget\\packages\\",
-        "outputPath": "D:\\LearnAngular\\v3-internal-department-transfer-letter\\be.department\\be.Department\\be.Department\\obj\\",
+        "outputPath": "D:\\LearnAngular\\DPTL\\be.department\\be.Department\\be.Department\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -159,14 +159,14 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\LearnAngular\\v3-internal-department-transfer-letter\\be.department\\be.Department\\be.department.Data\\be.Data.csproj": {
-                "projectPath": "D:\\LearnAngular\\v3-internal-department-transfer-letter\\be.department\\be.Department\\be.department.Data\\be.Data.csproj"
+              "D:\\LearnAngular\\DPTL\\be.department\\be.Department\\be.department.Data\\be.Data.csproj": {
+                "projectPath": "D:\\LearnAngular\\DPTL\\be.department\\be.Department\\be.department.Data\\be.Data.csproj"
               },
-              "D:\\LearnAngular\\v3-internal-department-transfer-letter\\be.department\\be.Department\\be.Department.Services\\be.Services.csproj": {
-                "projectPath": "D:\\LearnAngular\\v3-internal-department-transfer-letter\\be.department\\be.Department\\be.Department.Services\\be.Services.csproj"
+              "D:\\LearnAngular\\DPTL\\be.department\\be.Department\\be.Department.Services\\be.Services.csproj": {
+                "projectPath": "D:\\LearnAngular\\DPTL\\be.department\\be.Department\\be.Department.Services\\be.Services.csproj"
               },
-              "D:\\LearnAngular\\v3-internal-department-transfer-letter\\be.department\\be.Department\\Infrastructure\\Infrastructure.csproj": {
-                "projectPath": "D:\\LearnAngular\\v3-internal-department-transfer-letter\\be.department\\be.Department\\Infrastructure\\Infrastructure.csproj"
+              "D:\\LearnAngular\\DPTL\\be.department\\be.Department\\be.Infrastructure\\be.Infrastructure.csproj": {
+                "projectPath": "D:\\LearnAngular\\DPTL\\be.department\\be.Department\\be.Infrastructure\\be.Infrastructure.csproj"
               }
             }
           }
@@ -222,14 +222,14 @@
         }
       }
     },
-    "D:\\LearnAngular\\v3-internal-department-transfer-letter\\be.department\\be.Department\\Infrastructure\\Infrastructure.csproj": {
+    "D:\\LearnAngular\\DPTL\\be.department\\be.Department\\be.Infrastructure\\be.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\LearnAngular\\v3-internal-department-transfer-letter\\be.department\\be.Department\\Infrastructure\\Infrastructure.csproj",
-        "projectName": "Infrastructure",
-        "projectPath": "D:\\LearnAngular\\v3-internal-department-transfer-letter\\be.department\\be.Department\\Infrastructure\\Infrastructure.csproj",
+        "projectUniqueName": "D:\\LearnAngular\\DPTL\\be.department\\be.Department\\be.Infrastructure\\be.Infrastructure.csproj",
+        "projectName": "be.Infrastructure",
+        "projectPath": "D:\\LearnAngular\\DPTL\\be.department\\be.Department\\be.Infrastructure\\be.Infrastructure.csproj",
         "packagesPath": "C:\\Users\\ThanhLong\\.nuget\\packages\\",
-        "outputPath": "D:\\LearnAngular\\v3-internal-department-transfer-letter\\be.department\\be.Department\\Infrastructure\\obj\\",
+        "outputPath": "D:\\LearnAngular\\DPTL\\be.department\\be.Department\\be.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -249,11 +249,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\LearnAngular\\v3-internal-department-transfer-letter\\be.department\\be.Department\\be.department.Data\\be.Data.csproj": {
-                "projectPath": "D:\\LearnAngular\\v3-internal-department-transfer-letter\\be.department\\be.Department\\be.department.Data\\be.Data.csproj"
+              "D:\\LearnAngular\\DPTL\\be.department\\be.Department\\be.department.Data\\be.Data.csproj": {
+                "projectPath": "D:\\LearnAngular\\DPTL\\be.department\\be.Department\\be.department.Data\\be.Data.csproj"
               },
-              "D:\\LearnAngular\\v3-internal-department-transfer-letter\\be.department\\be.Department\\be.Department.Services\\be.Services.csproj": {
-                "projectPath": "D:\\LearnAngular\\v3-internal-department-transfer-letter\\be.department\\be.Department\\be.Department.Services\\be.Services.csproj"
+              "D:\\LearnAngular\\DPTL\\be.department\\be.Department\\be.Department.Services\\be.Services.csproj": {
+                "projectPath": "D:\\LearnAngular\\DPTL\\be.department\\be.Department\\be.Department.Services\\be.Services.csproj"
               }
             }
           }

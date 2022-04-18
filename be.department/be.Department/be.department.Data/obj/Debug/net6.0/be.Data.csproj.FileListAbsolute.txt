@@ -10,3 +10,15 @@ D:\LearnAngular\v3-internal-department-transfer-letter\be.department\be.Departme
 D:\LearnAngular\v3-internal-department-transfer-letter\be.department\be.Department\be.department.Data\obj\Debug\net6.0\refint\be.Data.dll
 D:\LearnAngular\v3-internal-department-transfer-letter\be.department\be.Department\be.department.Data\obj\Debug\net6.0\be.Data.pdb
 D:\LearnAngular\v3-internal-department-transfer-letter\be.department\be.Department\be.department.Data\obj\Debug\net6.0\ref\be.Data.dll
+D:\LearnAngular\DPTL\be.department\be.Department\be.department.Data\bin\Debug\net6.0\be.Data.deps.json
+D:\LearnAngular\DPTL\be.department\be.Department\be.department.Data\bin\Debug\net6.0\be.Data.dll
+D:\LearnAngular\DPTL\be.department\be.Department\be.department.Data\bin\Debug\net6.0\be.Data.pdb
+D:\LearnAngular\DPTL\be.department\be.Department\be.department.Data\obj\Debug\net6.0\be.Data.csproj.AssemblyReference.cache
+D:\LearnAngular\DPTL\be.department\be.Department\be.department.Data\obj\Debug\net6.0\be.Data.GeneratedMSBuildEditorConfig.editorconfig
+D:\LearnAngular\DPTL\be.department\be.Department\be.department.Data\obj\Debug\net6.0\be.Data.AssemblyInfoInputs.cache
+D:\LearnAngular\DPTL\be.department\be.Department\be.department.Data\obj\Debug\net6.0\be.Data.AssemblyInfo.cs
+D:\LearnAngular\DPTL\be.department\be.Department\be.department.Data\obj\Debug\net6.0\be.Data.csproj.CoreCompileInputs.cache
+D:\LearnAngular\DPTL\be.department\be.Department\be.department.Data\obj\Debug\net6.0\be.Data.dll
+D:\LearnAngular\DPTL\be.department\be.Department\be.department.Data\obj\Debug\net6.0\refint\be.Data.dll
+D:\LearnAngular\DPTL\be.department\be.Department\be.department.Data\obj\Debug\net6.0\be.Data.pdb
+D:\LearnAngular\DPTL\be.department\be.Department\be.department.Data\obj\Debug\net6.0\ref\be.Data.dll

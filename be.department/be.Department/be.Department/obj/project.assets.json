@@ -783,6 +783,21 @@
           "bin/placeholder/be.Data.dll": {}
         }
       },
+      "be.Infrastructure/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "6.0.4",
+          "be.Data": "1.0.0",
+          "be.Services": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/be.Infrastructure.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/be.Infrastructure.dll": {}
+        }
+      },
       "be.Services/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
@@ -794,21 +809,6 @@
         },
         "runtime": {
           "bin/placeholder/be.Services.dll": {}
-        }
-      },
-      "Infrastructure/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v6.0",
-        "dependencies": {
-          "Microsoft.EntityFrameworkCore": "6.0.4",
-          "be.Data": "1.0.0",
-          "be.Services": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/Infrastructure.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Infrastructure.dll": {}
         }
       }
     }
@@ -2258,25 +2258,25 @@
       "path": "../be.department.Data/be.Data.csproj",
       "msbuildProject": "../be.department.Data/be.Data.csproj"
     },
+    "be.Infrastructure/1.0.0": {
+      "type": "project",
+      "path": "../be.Infrastructure/be.Infrastructure.csproj",
+      "msbuildProject": "../be.Infrastructure/be.Infrastructure.csproj"
+    },
     "be.Services/1.0.0": {
       "type": "project",
       "path": "../be.Department.Services/be.Services.csproj",
       "msbuildProject": "../be.Department.Services/be.Services.csproj"
-    },
-    "Infrastructure/1.0.0": {
-      "type": "project",
-      "path": "../Infrastructure/Infrastructure.csproj",
-      "msbuildProject": "../Infrastructure/Infrastructure.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
-      "Infrastructure >= 1.0.0",
       "Microsoft.EntityFrameworkCore.SqlServer >= 6.0.4",
       "Microsoft.EntityFrameworkCore.Tools >= 6.0.4",
       "Microsoft.QualityTools.Testing.Fakes >= 16.11.230815",
       "Swashbuckle.AspNetCore >= 6.2.3",
       "be.Data >= 1.0.0",
+      "be.Infrastructure >= 1.0.0",
       "be.Services >= 1.0.0"
     ]
   },
@@ -2287,11 +2287,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\LearnAngular\\v3-internal-department-transfer-letter\\be.department\\be.Department\\be.Department\\be.Department.csproj",
+      "projectUniqueName": "D:\\LearnAngular\\DPTL\\be.department\\be.Department\\be.Department\\be.Department.csproj",
       "projectName": "be.Department",
-      "projectPath": "D:\\LearnAngular\\v3-internal-department-transfer-letter\\be.department\\be.Department\\be.Department\\be.Department.csproj",
+      "projectPath": "D:\\LearnAngular\\DPTL\\be.department\\be.Department\\be.Department\\be.Department.csproj",
       "packagesPath": "C:\\Users\\ThanhLong\\.nuget\\packages\\",
-      "outputPath": "D:\\LearnAngular\\v3-internal-department-transfer-letter\\be.department\\be.Department\\be.Department\\obj\\",
+      "outputPath": "D:\\LearnAngular\\DPTL\\be.department\\be.Department\\be.Department\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -2311,14 +2311,14 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "D:\\LearnAngular\\v3-internal-department-transfer-letter\\be.department\\be.Department\\be.department.Data\\be.Data.csproj": {
-              "projectPath": "D:\\LearnAngular\\v3-internal-department-transfer-letter\\be.department\\be.Department\\be.department.Data\\be.Data.csproj"
+            "D:\\LearnAngular\\DPTL\\be.department\\be.Department\\be.department.Data\\be.Data.csproj": {
+              "projectPath": "D:\\LearnAngular\\DPTL\\be.department\\be.Department\\be.department.Data\\be.Data.csproj"
             },
-            "D:\\LearnAngular\\v3-internal-department-transfer-letter\\be.department\\be.Department\\be.Department.Services\\be.Services.csproj": {
-              "projectPath": "D:\\LearnAngular\\v3-internal-department-transfer-letter\\be.department\\be.Department\\be.Department.Services\\be.Services.csproj"
+            "D:\\LearnAngular\\DPTL\\be.department\\be.Department\\be.Department.Services\\be.Services.csproj": {
+              "projectPath": "D:\\LearnAngular\\DPTL\\be.department\\be.Department\\be.Department.Services\\be.Services.csproj"
             },
-            "D:\\LearnAngular\\v3-internal-department-transfer-letter\\be.department\\be.Department\\Infrastructure\\Infrastructure.csproj": {
-              "projectPath": "D:\\LearnAngular\\v3-internal-department-transfer-letter\\be.department\\be.Department\\Infrastructure\\Infrastructure.csproj"
+            "D:\\LearnAngular\\DPTL\\be.department\\be.Department\\be.Infrastructure\\be.Infrastructure.csproj": {
+              "projectPath": "D:\\LearnAngular\\DPTL\\be.department\\be.Department\\be.Infrastructure\\be.Infrastructure.csproj"
             }
           }
         }

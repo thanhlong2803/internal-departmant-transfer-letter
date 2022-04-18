@@ -589,11 +589,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\LearnAngular\\v3-internal-department-transfer-letter\\be.department\\be.Department\\be.department.Data\\be.Data.csproj",
+      "projectUniqueName": "D:\\LearnAngular\\DPTL\\be.department\\be.Department\\be.department.Data\\be.Data.csproj",
       "projectName": "be.Data",
-      "projectPath": "D:\\LearnAngular\\v3-internal-department-transfer-letter\\be.department\\be.Department\\be.department.Data\\be.Data.csproj",
+      "projectPath": "D:\\LearnAngular\\DPTL\\be.department\\be.Department\\be.department.Data\\be.Data.csproj",
       "packagesPath": "C:\\Users\\ThanhLong\\.nuget\\packages\\",
-      "outputPath": "D:\\LearnAngular\\v3-internal-department-transfer-letter\\be.department\\be.Department\\be.department.Data\\obj\\",
+      "outputPath": "D:\\LearnAngular\\DPTL\\be.department\\be.Department\\be.department.Data\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
