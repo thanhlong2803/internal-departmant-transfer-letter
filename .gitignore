@@ -7,6 +7,10 @@
 *.rsuser
 *.suo
 *.user
+_ReSharper.*
+bin
+obj
+packages
 *.userosscache
 *.sln.docstates
 
