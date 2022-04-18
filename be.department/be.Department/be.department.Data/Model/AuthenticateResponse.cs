@@ -1,6 +1,6 @@
 ﻿using be.Data;
 
-namespace be.Department.Models
+namespace be.Data
 {
     public class AuthenticateResponse
     {
