@@ -24,9 +24,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\..\..\v3-internal-department-transfer-letter\be.department\be.Department\be.Infrastructure\be.Infrastructure.csproj" />
     <ProjectReference Include="..\be.department.Data\be.Data.csproj" />
     <ProjectReference Include="..\be.Department.Services\be.Services.csproj" />
-    <ProjectReference Include="..\Infrastructure\be.Infrastructure.csproj" />
   </ItemGroup>
 
   <ItemGroup>
