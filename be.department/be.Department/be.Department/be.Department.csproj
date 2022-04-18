@@ -26,7 +26,7 @@
   <ItemGroup>
     <ProjectReference Include="..\be.department.Data\be.Data.csproj" />
     <ProjectReference Include="..\be.Department.Services\be.Services.csproj" />
-    <ProjectReference Include="..\Infrastructure\Infrastructure.csproj" />
+    <ProjectReference Include="..\Infrastructure\be.Infrastructure.csproj" />
   </ItemGroup>
 
   <ItemGroup>
