@@ -1,11 +1,12 @@
 using be.Services;
 using Microsoft.AspNetCore.Mvc;
-using be.Data;
+using be.Department.Models;
 
 namespace be.Department.Controllers
 {
     [ApiController]
     [Route("[controller]")]
+    //Create and Validate JWT Tokens + Use Custom JWT Middleware
     public class AuthenticationController : ControllerBase
     {
         private readonly IDepartmentService _departmentService;
@@ -15,11 +16,10 @@ namespace be.Department.Controllers
             _departmentService = departmentService;
         }
 
-        [HttpGet(Name = "Login")]
-        public ActionResult<List<be.Data.Department>> Login()
-        {
-            var getAllDepartment = _departmentService.GetAllDepartments();
-            return Ok(getAllDepartment);
+        [HttpPost(Name = "Login")]
+        public ActionResult<List<be.Data.Employee>> Login(Login login)
+        {            
+            return Ok(null);
         }
     }
 }
