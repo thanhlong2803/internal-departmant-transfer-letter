@@ -11,7 +11,19 @@ import { AuthenticationService } from 'src/app/fe.services/authentication/authen
 })
 
 export class HomePageComponent {
-    constructor() { }
+    currentUser: any;
+
+    constructor(
+        private router: Router,
+        private authenticationService: AuthenticationService
+    ) {  
+        this.authenticationService.currentUser.subscribe(x => this.currentUser = x);
+    }
 
     ngOnInit() { }
+    
+    btLogout() {
+        this.authenticationService.logout();
+        this.router.navigate(['/login']);
+    }
 }
