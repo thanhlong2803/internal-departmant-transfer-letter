@@ -11,7 +11,17 @@ import { AuthenticationService } from 'src/app/fe.services/authentication/authen
 })
 
 export class HomePageComponent {
-    constructor() { }
+    constructor(private authenticationService: AuthenticationService, private router: Router, private route: ActivatedRoute) {
+        debugger;
+        if (this.authenticationService.getItemUser() === null) {
+            this.router.navigate(['/login']);
+        }
+    }
 
     ngOnInit() { }
+
+    btLogout() {      
+        this.authenticationService.logout();
+        this.router.navigate(['/login']);
+    }
 }

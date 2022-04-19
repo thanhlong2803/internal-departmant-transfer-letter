@@ -18,7 +18,7 @@ namespace Infrastructure
                                                .Where(z => z.Id == employeeId)
                                                .FirstOrDefault();
 
-            return employee ?? new Employee();
+            return employee;
         }
 
         public Employee GetEmployeeByEmail(AuthenticateRequest authenticateRequest)
@@ -26,7 +26,7 @@ namespace Infrastructure
             var employee = _departmentDbcontext.Employee
                                                .Where(z => z.Email == authenticateRequest.Email)
                                                .FirstOrDefault();
-            return employee ?? new Employee();
+            return employee;
         }
 
     }

@@ -15,10 +15,10 @@ export class LoginComponent {
     loading: boolean = false;
     returnUrl: string | undefined;
 
-    constructor(private authenticationService: AuthenticationService, private router: Router ,  private route: ActivatedRoute) { 
-        if (this.authenticationService.currentUserValue) { 
-            this.router.navigate(['/']);
-        }
+    constructor(private authenticationService: AuthenticationService, private router: Router, private route: ActivatedRoute) {
+        // if (this.authenticationService.currentUserValue) { 
+        //     this.router.navigate(['/']);
+        // }
     }
 
     ngOnInit() { this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/'; }
@@ -29,10 +29,10 @@ export class LoginComponent {
             .pipe(first())
             .subscribe(
                 data => {
-                    debugger;
                     this.router.navigate([this.returnUrl]);
                 },
                 error => {
+                    console.log(error.message);
                     this.loading = false;
                 });
     }

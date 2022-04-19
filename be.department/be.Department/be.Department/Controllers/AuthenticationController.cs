@@ -26,6 +26,10 @@ namespace be.Department.Controllers
         {
             var departmentOfEmployee = new be.Data.Department();
             var employee = _employeeService.GetEmployeeByEmail(auth);
+            if (employee == null)
+            {
+                throw new KeyNotFoundException("Email : '" + auth.Email + "' is not exits");
+            }
 
             //validate
             //if (Employee == null || !BCrypt.Verify(model.Password, user.PasswordHash))

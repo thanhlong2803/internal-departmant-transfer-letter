@@ -39,11 +39,11 @@ export class AuthenticationService {
         return this.currentUserSubject.value;
     }
 
-    private getAccessUser(LoginResponse: Employee) {
+    public getAccessUser(LoginResponse: Employee) {
         localStorageHelper.setItem(`AccessUserKey`, LoginResponse);
     }
 
-    private getItemUser() {
+    public getItemUser() {
         localStorageHelper.getItem(`AccessUserKey`);
     }
 
