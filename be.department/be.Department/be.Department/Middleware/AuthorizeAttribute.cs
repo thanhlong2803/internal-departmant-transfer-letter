@@ -15,7 +15,7 @@ namespace be.Department.Middleware
                 return;
 
             // authorization
-            var employee = (Employee)context.HttpContext.Items["User"];
+            var employee = (Employee)context.HttpContext.Items["Employee"];
             if (employee == null)
                 context.Result = new JsonResult(new { message = "Unauthorized" }) { StatusCode = StatusCodes.Status401Unauthorized };
         }

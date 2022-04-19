@@ -17,12 +17,12 @@ export class HomePageComponent {
         private router: Router,
         private authenticationService: AuthenticationService
     ) {  
-        this.authenticationService.currentUser.subscribe(x => this.currentUser = x);
+        
     }
 
     ngOnInit() { }
-    
-    btLogout() {
+
+    btlogout() {
         this.authenticationService.logout();
         this.router.navigate(['/login']);
     }

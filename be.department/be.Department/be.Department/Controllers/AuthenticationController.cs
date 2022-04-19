@@ -12,7 +12,7 @@ namespace be.Department.Controllers
         private readonly IEmployeeService _employeeService;
         private readonly IDepartmentService _departmentService;
         private readonly IJwtUtils _jwtUtils;
-        public AuthenticationController(IEmployeeService employeeService,IJwtUtils jwtUtils,
+        public AuthenticationController(IEmployeeService employeeService, IJwtUtils jwtUtils,
             IDepartmentService departmentService)
         {
             _employeeService = employeeService;
@@ -26,6 +26,10 @@ namespace be.Department.Controllers
         {
             var departmentOfEmployee = new be.Data.Department();
             var employee = _employeeService.GetEmployeeByEmail(auth);
+
+            if (employee == null)
+                throw new AppException("email '" + auth.Email + "' is not exits");
+
 
             //validate
             //if (Employee == null || !BCrypt.Verify(model.Password, user.PasswordHash))

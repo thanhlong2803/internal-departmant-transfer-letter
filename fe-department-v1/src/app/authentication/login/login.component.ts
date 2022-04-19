@@ -16,9 +16,7 @@ export class LoginComponent {
     returnUrl: string | undefined;
 
     constructor(private authenticationService: AuthenticationService, private router: Router ,  private route: ActivatedRoute) { 
-        if (this.authenticationService.currentUserValue) { 
-            this.router.navigate(['/']);
-        }
+        
     }
 
     ngOnInit() { this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/'; }
@@ -33,6 +31,7 @@ export class LoginComponent {
                     this.router.navigate([this.returnUrl]);
                 },
                 error => {
+                    alert(error);
                     this.loading = false;
                 });
     }
