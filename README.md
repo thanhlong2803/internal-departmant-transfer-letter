@@ -32,8 +32,7 @@ Finally, The table settingtransferletter description is the most important in a 
 |3|Page main home see file of user within department||
 |4  |Upload and download file for department ||
 |  5|Setting sent file for department ||
-|7|Review code front-end||
-|  8|Review code back-end  ||
+
 
 
 
