@@ -50,8 +50,8 @@ app.UseCors(x => x
                .SetIsOriginAllowed(origin => true) // allow any origin
                .AllowCredentials()); // allow credentials
 
-// global error handler
-//app.UseMiddleware<ErrorHandlerMiddleware>();
+//global error handler
+app.UseMiddleware<be.Department.Middleware.ErrorHandleerMiddleware>();
 
 // custom jwt auth middleware
 app.UseMiddleware<CustomMiddleware>();
