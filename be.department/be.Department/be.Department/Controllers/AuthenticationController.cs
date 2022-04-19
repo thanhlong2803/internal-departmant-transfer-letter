@@ -10,18 +10,47 @@ namespace be.Department.Controllers
     public class AuthenticationController : ControllerBase
     {
         private readonly IEmployeeService _employeeService;
-
-        public AuthenticationController(IEmployeeService employeeService)
+        private readonly IDepartmentService _departmentService;
+        private readonly IJwtUtils _jwtUtils;
+        public AuthenticationController(IEmployeeService employeeService,IJwtUtils jwtUtils,
+            IDepartmentService departmentService)
         {
             _employeeService = employeeService;
+            _jwtUtils = jwtUtils;
+            _departmentService = departmentService;
         }
 
         [HttpPost()]
         [AllowAnonymous] //Do you think ?
         public ActionResult<AuthenticateResponse> Login(AuthenticateRequest auth)
         {
-            var response = _employeeService.Authenticate(auth);
-            return Ok(response);
+            var departmentOfEmployee = new be.Data.Department();
+            var employee = _employeeService.GetEmployeeByEmail(auth);
+
+            //validate
+            //if (Employee == null || !BCrypt.Verify(model.Password, user.PasswordHash))
+            //    throw new AppException("Username or password is incorrect");
+            //authentication successful
+
+            //Select employee contain of (department , role)
+            if (employee != null)
+            {
+                departmentOfEmployee = _departmentService.GetDepartmentByEmployeeId(employee.DepartmentId);
+            }
+
+            var authenticateResponse = new AuthenticateResponse
+            {
+                Email = employee?.Email,
+                FirstName = employee?.FirstName,
+                LastName = employee?.LastName,
+                Id = employee.Id
+            };
+
+            authenticateResponse.DepartmentId = departmentOfEmployee.Id;
+            authenticateResponse.DepartmentName = departmentOfEmployee.Name;
+            authenticateResponse.Token = _jwtUtils.GenerateToken(employee);
+
+            return Ok(authenticateResponse);
         }
     }
 }

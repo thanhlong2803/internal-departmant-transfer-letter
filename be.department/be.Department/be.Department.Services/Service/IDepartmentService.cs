@@ -6,5 +6,6 @@ namespace be.Services
     {
         List<Department> GetAllDepartments();
         void CreateDepartment(Department department);
+        Department GetDepartmentByEmployeeId(long departmentId);
     }
 }

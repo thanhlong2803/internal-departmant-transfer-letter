@@ -1,3 +1,5 @@
+using be.Department.Helpers;
+using be.Department.Middleware;
 using be.Service;
 using be.Services;
 using Infrastructure;
@@ -18,9 +20,19 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<SettingDbcontext>(opt => opt.UseSqlServer(configuration.GetConnectionString("MainConnection"),
     b => b.MigrationsAssembly("Api Department")));
 
+// configure strongly typed settings object
+builder.Services.Configure<AppSettings>(builder.Configuration.GetSection("AppSettings"));
+
 // Add services to the container.
 builder.Services.AddScoped<IDepartmentService, DepartmentService>();
 builder.Services.AddScoped<IDepartmentRepository, DepartmentRepository>();
+
+builder.Services.AddScoped<IEmployeeService, EmployeeService>();
+builder.Services.AddScoped<IEmployeeRepository, EmployeeRepository>();
+
+builder.Services.AddScoped<IJwtUtils, JwtUtils>();
+
+
 
 var app = builder.Build();
 // Configure the HTTP request pipeline.
@@ -37,6 +49,12 @@ app.UseCors(x => x
                .AllowAnyHeader()
                .SetIsOriginAllowed(origin => true) // allow any origin
                .AllowCredentials()); // allow credentials
+
+// global error handler
+//app.UseMiddleware<ErrorHandlerMiddleware>();
+
+// custom jwt auth middleware
+app.UseMiddleware<CustomMiddleware>();
 
 app.UseAuthorization();
 

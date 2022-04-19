@@ -1,4 +1,4 @@
-﻿using be.Service;
+﻿using be.Services;
 
 namespace be.Department.Middleware
 {

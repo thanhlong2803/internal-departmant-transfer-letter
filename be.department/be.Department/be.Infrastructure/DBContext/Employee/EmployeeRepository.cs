@@ -1,5 +1,5 @@
 ﻿using be.Data;
-using be.Service;
+using be.Services;
 
 namespace Infrastructure
 {
@@ -14,7 +14,18 @@ namespace Infrastructure
 
         public Employee GetEmployeeById(long employeeId)
         {
-            var employee = _departmentDbcontext.Employee.Where(z => z.Id == employeeId).FirstOrDefault();
+            var employee = _departmentDbcontext.Employee
+                                               .Where(z => z.Id == employeeId)
+                                               .FirstOrDefault();
+
+            return employee ?? new Employee();
+        }
+
+        public Employee GetEmployeeByEmail(AuthenticateRequest authenticateRequest)
+        {
+            var employee = _departmentDbcontext.Employee
+                                               .Where(z => z.Email == authenticateRequest.Email)
+                                               .FirstOrDefault();
             return employee ?? new Employee();
         }
 

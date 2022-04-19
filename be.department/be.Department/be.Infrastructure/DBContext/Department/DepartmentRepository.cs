@@ -24,5 +24,11 @@ namespace Infrastructure
         {
             return _departmentDbcontext.Department.ToList();
         }
+
+        public Department GetDepartmentByEmployeeId(long departmentId)
+        {
+            var department = _departmentDbcontext.Department.Where(z => z.Id == departmentId).FirstOrDefault();
+            return department;
+        }
     }
 }

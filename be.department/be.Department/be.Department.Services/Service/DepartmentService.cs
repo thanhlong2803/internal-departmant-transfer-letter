@@ -26,6 +26,11 @@ namespace be.Services
             _departmentRepository.CreateDepartment(department);
         }
 
+        public Department GetDepartmentByEmployeeId(long departmentId)
+        {
+            return _departmentRepository.GetDepartmentByEmployeeId(departmentId);
+        }
+
         #endregion
     }
 }
