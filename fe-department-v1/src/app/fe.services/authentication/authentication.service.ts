@@ -18,8 +18,8 @@ export class AuthenticationService {
         this.currentUser = this.currentUserSubject.asObservable();
     }
 
-    public login(username: string, password: string) {
-        return this.http.post<any>(`${environment.api_url}/Authentication`, { username, password }).pipe(map(resp => {
+    public login(email: string, password: string) {
+        return this.http.post<any>(`${environment.api_url}/Authentication`, { email, password }).pipe(map(resp => {
             //store loginResponse details and jwt token in local storage to keep user logged in between page refreshes
             if (resp !== undefined && resp != null) {
                 this.getAccessUser(resp);

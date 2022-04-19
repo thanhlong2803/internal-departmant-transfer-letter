@@ -21,7 +21,7 @@ export class LoginComponent {
 
     btLogin() {
         this.loading = true;
-        this.authenticationService.login(this.login.username, this.login.password)
+        this.authenticationService.login(this.login.email, this.login.password)
             .pipe(first())
             .subscribe(
                 data => {
