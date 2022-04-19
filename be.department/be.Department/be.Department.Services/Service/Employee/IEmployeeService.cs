@@ -1,9 +1,9 @@
 ﻿using be.Data;
 using be.Data.Model.EmployeeModel;
 
-namespace be.Services.Service.Employee
+namespace be.Services
 {
-    internal interface IEmployeeService
+    public interface IEmployeeService
     {
         //Create and Validate JWT Tokens + Use Custom JWT Middleware
         AuthenticateResponse Authenticate(AuthenticateRequest model);

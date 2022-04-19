@@ -1,27 +1,27 @@
-using be.Services;
 using Microsoft.AspNetCore.Mvc;
-
 using be.Data;
+using be.Department.Middleware;
+using be.Services;
 
 namespace be.Department.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    
     public class AuthenticationController : ControllerBase
     {
-        private readonly IDepartmentService _departmentService;
+        private readonly IEmployeeService _employeeService;
 
-        public AuthenticationController(IDepartmentService departmentService)
+        public AuthenticationController(IEmployeeService employeeService)
         {
-            _departmentService = departmentService;
+            _employeeService = employeeService;
         }
 
         [HttpPost()]
+        [AllowAnonymous] //Do you think ?
         public ActionResult<AuthenticateResponse> Login(AuthenticateRequest auth)
-        {            
-            return Ok(null);
+        {
+            var response = _employeeService.Authenticate(auth);
+            return Ok(response);
         }
-
     }
 }
