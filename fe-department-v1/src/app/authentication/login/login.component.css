@@ -1,82 +1,19 @@
-.box {
-    width: 500px;
-    margin: 200px 0;
-}
-
-.shape1{
-    position: relative;
-    height: 150px;
-    width: 150px;
-    background-color: #0074d9;
-    border-radius: 80px;
-    float: left;
-    margin-right: -50px;
-}
-.shape2 {
-    position: relative;
-    height: 150px;
-    width: 150px;
-    background-color: #0074d9;
-    border-radius: 80px;
-    margin-top: -30px;
-    float: left;
-}
-.shape3 {
-    position: relative;
-    height: 150px;
-    width: 150px;
-    background-color: #0074d9;
-    border-radius: 80px;
-    margin-top: -30px;
-    float: left;
-    margin-left: -31px;
-}
-.shape4 {
-    position: relative;
-    height: 150px;
-    width: 150px;
-    background-color: #0074d9;
-    border-radius: 80px;
-    margin-top: -25px;
-    float: left;
-    margin-left: -32px;
-}
-.shape5 {
-    position: relative;
-    height: 150px;
-    width: 150px;
-    background-color: #0074d9;
-    border-radius: 80px;
-    float: left;
-    margin-right: -48px;
-    margin-left: -32px;
-    margin-top: -30px;
-}
-.shape6 {
-    position: relative;
-    height: 150px;
-    width: 150px;
-    background-color: #0074d9;
-    border-radius: 80px;
-    float: left;
-    margin-right: -20px;
-    margin-top: -35px;
-}
-.shape7 {
-    position: relative;
-    height: 150px;
-    width: 150px;
-    background-color: #0074d9;
-    border-radius: 80px;
-    float: left;
-    margin-right: -20px;
-    margin-top: -57px;
-}
-.float {
-    position: absolute;
-    z-index: 2;
-}
-
-.form {
-    margin-left: 145px;
-}
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #17a2b8;
+    height: 100vh;
+  }
+  #login .container #login-row #login-column #login-box {
+    margin-top: 20px;
+    max-width: 600px;
+    height: 320px;
+    border: 1px solid #9C9C9C;
+    background-color: #EAEAEA;
+  }
+  #login .container #login-row #login-column #login-box #login-form {
+    padding: 20px;
+  }
+  #login .container #login-row #login-column #login-box #login-form #register-link {
+    margin-top: -85px;
+  }
