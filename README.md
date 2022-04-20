@@ -24,7 +24,7 @@ Finally, The table settingtransferletter description is the most important in a 
 |--|--|
 | ![enter image description here](https://github.com/thanhlong2803/update-image/blob/main/image3/be2.png) | ![enter image description here](https://github.com/thanhlong2803/update-image/blob/main/image3/fe2.png) |
 
-# Love Angular 12 and NET6. I read a lot of books about it. We should create many projects. Let me start
+# Love Angular 12 and NET6. I read a lot of books about it. We should create many projects. Let me start to create a small the project 
 | Task | Description | Mockup ui/ux |
 |--|--|--|
 |  1| User Registration and Login|![enter image description here](https://github.com/thanhlong2803/update-image/blob/main/image3/login.png)|
