@@ -26,8 +26,7 @@ public class JwtUtils : IJwtUtils
     }
 
     public string GenerateToken(Employee employee)
-    {
-        // generate token that is valid for 7 days
+    {        
         var tokenHandler = new JwtSecurityTokenHandler();
         var key = Encoding.ASCII.GetBytes(_appSettings.Secret);
         var tokenDescriptor = new SecurityTokenDescriptor
@@ -54,8 +53,7 @@ public class JwtUtils : IJwtUtils
                 ValidateIssuerSigningKey = true,
                 IssuerSigningKey = new SymmetricSecurityKey(key),
                 ValidateIssuer = false,
-                ValidateAudience = false,
-                // set clockskew to zero so tokens expire exactly at token expiration time (instead of 5 minutes later)
+                ValidateAudience = false,                
                 ClockSkew = TimeSpan.Zero
             }, out SecurityToken validatedToken);
 

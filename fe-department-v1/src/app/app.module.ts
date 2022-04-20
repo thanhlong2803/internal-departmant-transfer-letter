@@ -9,6 +9,7 @@ import { HomePageComponent } from './admin/home-page/home-page.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './authentication/login/login.component';
+import { AlertComponent } from './_component/_alert/alert.component';
 import { ErrorInterceptor } from './_helpers/error.interceptor';
 import { JwtInterceptor } from './_helpers/jwt.interceptor';
 
@@ -19,7 +20,8 @@ import { JwtInterceptor } from './_helpers/jwt.interceptor';
     HomePageComponent,
     EmployeePageComponent,
     EmployeeRolePageComponent,
-    EmployeeFilePageComponent
+    EmployeeFilePageComponent,
+    AlertComponent
   ],
   imports: [
     BrowserModule,
