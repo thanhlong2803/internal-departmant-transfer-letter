@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Router } from '@angular/router';
 import { first } from 'rxjs/operators';
-import { Login } from 'src/app/fe.data/employee/employee.model';
+import { Employee, EmployeeList } from 'src/app/fe.data/employee/employee.model';
 import { AlertService } from 'src/app/fe.services/alert.service';
 import { AuthenticationService } from 'src/app/fe.services/authentication/authentication.service';
+import { EmployeeService } from 'src/app/fe.services/employee/employee.service';
 
 @Component({
     selector: 'app-home-page',
@@ -13,20 +14,38 @@ import { AuthenticationService } from 'src/app/fe.services/authentication/authen
 
 export class HomePageComponent {
     currentUser: any;
+    public manageEmployee = {} as Employee;
+    public employeeList: Array<EmployeeList> = [];
 
     constructor(
-        private alertService : AlertService,
+        private alertService: AlertService,
         private router: Router,
-        private authenticationService: AuthenticationService
-    ) {  
-        
-    }
+        private authenticationService: AuthenticationService,
+        private EmployeeService: EmployeeService
+    ) { }
 
-    ngOnInit() { }
+    ngOnInit() {
+        this.manageEmployee = this.authenticationService.getItemUser();
+        if (this.manageEmployee !== undefined && this.manageEmployee !== null) {
+            this.getAllEmployeeOfDepartment(this.manageEmployee.id, this.manageEmployee.departmentId);
+        }
+    }
 
     btlogout() {
         this.authenticationService.logout();
-        this.alertService.success('Logout is successful', true);    
+        this.alertService.success('Logout is successful', true);
         this.router.navigate(['/login']);
+    }
+
+    private getAllEmployeeOfDepartment(employeeId: number, departmentId: number) {
+        this.EmployeeService.getAllEmployeeOfDepartment(employeeId, departmentId)
+            .pipe(first())
+            .subscribe(
+                data => {
+                    this.employeeList = data;
+                },
+                error => {
+                    this.alertService.error(error, true);
+                });
     }
 }

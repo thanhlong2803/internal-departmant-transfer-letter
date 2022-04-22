@@ -4,7 +4,8 @@
             <div class="table-title">
                 <div class="row">
                     <div class="col-sm-8">
-                        <h2>Employee <b>Details For Department</b></h2>
+                       <h2><span>Department name: </span> <strong>{{manageEmployee.departmentName}}</strong>   Details For  Department  </h2>                    
+                        <span>Employee name: </span> <strong>{{manageEmployee.fullName}}</strong>   <span> Position name : </span> <strong>  {{manageEmployee.postionName}}</strong>                      
                     </div>
                     <div class="col-sm-4">
                         <button (click)="btlogout()" type="button" class="btn btn-danger add-new"> Logout</button>
@@ -20,53 +21,15 @@
                         <th>Firstname</th>
                         <th>Lastname</th>
                         <th>Position</th>
-                        <th>File</th>
                         <th>Actions</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td>
-                            <a class="add" title="Add" data-toggle="tooltip"><i class="material-icons"></i></a>
-                            <a class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons"></i></a>
-                            <a class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons"></i></a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td>
-                            <a class="add" title="Add" data-toggle="tooltip"><i class="material-icons"></i></a>
-                            <a class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons"></i></a>
-                            <a class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons"></i></a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td>
-                            <a class="add" title="Add" data-toggle="tooltip"><i class="material-icons"></i></a>
-                            <a class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons"></i></a>
-                            <a class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons"></i></a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                    <tr *ngFor="let employee of employeeList">
+                        <td>{{employee.email}}</td>
+                        <td>{{employee.firstname}}</td>
+                        <td>{{employee.lastname}}</td>
+                        <td>{{employee.postionName}}</td>
                         <td>
                             <a class="add" title="Add" data-toggle="tooltip"><i class="material-icons"></i></a>
                             <a class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons"></i></a>

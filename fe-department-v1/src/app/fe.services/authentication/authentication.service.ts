@@ -4,7 +4,7 @@ import { BehaviorSubject, Observable } from "rxjs";
 import { Employee } from "src/app/fe.data/employee/employee.model";
 import { localStorageHelper } from "src/app/_helpers/localStorageHelper";
 import { environment } from "src/environments/environment";
-import { map, filter, catchError, mergeMap } from 'rxjs/operators';
+import { map } from 'rxjs/operators';
 
 
 @Injectable({ providedIn: 'root' })
@@ -39,12 +39,12 @@ export class AuthenticationService {
         return this.currentUserSubject.value;
     }
 
-    private getAccessUser(LoginResponse: Employee) {
+    public getAccessUser(LoginResponse: Employee) {
         localStorageHelper.setItem(`AccessUserKey`, LoginResponse);
     }
 
-    private getItemUser() {
-        localStorageHelper.getItem(`AccessUserKey`);
+    public getItemUser() : Employee {
+       return JSON.parse(localStorage.getItem('AccessUserKey') || '{}')
     }
 
 }
