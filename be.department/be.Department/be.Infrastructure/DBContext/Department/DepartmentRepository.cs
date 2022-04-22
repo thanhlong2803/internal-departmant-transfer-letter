@@ -20,6 +20,11 @@ namespace Infrastructure
             return department;
         }
 
+        public Department DepartmentById(long departmentId)
+        {
+            return _departmentDbcontext.Department.Where(z => z.Id == departmentId).FirstOrDefault();
+        }
+
         public List<Department> GetAllDepartment()
         {
             return _departmentDbcontext.Department.ToList();
@@ -30,5 +35,6 @@ namespace Infrastructure
             var department = _departmentDbcontext.Department.Where(z => z.Id == departmentId).FirstOrDefault();
             return department;
         }
+
     }
 }

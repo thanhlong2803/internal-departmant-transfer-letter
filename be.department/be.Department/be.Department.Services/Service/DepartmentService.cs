@@ -5,7 +5,7 @@ namespace be.Services
 {
     public class DepartmentService : IDepartmentService
     {
-        public IDepartmentRepository _departmentRepository;
+        private readonly IDepartmentRepository _departmentRepository;
 
         //create init contructor dependency injection
         public DepartmentService(IDepartmentRepository departmentRepository)

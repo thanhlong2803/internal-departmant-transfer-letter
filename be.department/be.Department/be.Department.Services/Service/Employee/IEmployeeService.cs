@@ -7,6 +7,6 @@ namespace be.Services
     {
         //Create and Validate JWT Tokens + Use Custom JWT Middleware
         Employee GetEmployeeByEmail(AuthenticateRequest model);
-        List<EmployeeResponse> GetEmployeeInDepartments(long departmentId);    
+        List<EmployeeResponse> GetEmployeeByDepartmentId(long employeeId, long departmentId);
     }
 }

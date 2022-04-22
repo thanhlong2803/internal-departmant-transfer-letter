@@ -21,33 +21,31 @@ namespace be.Department.Controllers
         }
 
         [HttpPost()]
-        [AllowAnonymous] //Do you think ?
+        [AllowAnonymous] 
         public ActionResult<AuthenticateResponse> Login(AuthenticateRequest auth)
         {
             var departmentOfEmployee = new be.Data.Department();
             var employee = _employeeService.GetEmployeeByEmail(auth);
 
             if (employee == null)
-                throw new AppException("email '" + auth.Email + "' is not exits");
+                throw new AppException("Email '" + auth.Email + "' is not exits");
 
-
-            //validate
-            //if (Employee == null || !BCrypt.Verify(model.Password, user.PasswordHash))
-            //    throw new AppException("Username or password is incorrect");
-            //authentication successful
-
-            //Select employee contain of (department , role)
             if (employee != null)
             {
                 departmentOfEmployee = _departmentService.GetDepartmentByEmployeeId(employee.DepartmentId);
+                if (departmentOfEmployee == null)
+                    throw new AppException("Department of employee is not exits");
             }
 
             var authenticateResponse = new AuthenticateResponse
             {
+                Id = employee.Id,
                 Email = employee?.Email,
                 FirstName = employee?.FirstName,
                 LastName = employee?.LastName,
-                Id = employee.Id
+                PostionId = departmentOfEmployee.PositionType,
+                FullName = employee?.FullName
+                //after show role
             };
 
             authenticateResponse.DepartmentId = departmentOfEmployee.Id;

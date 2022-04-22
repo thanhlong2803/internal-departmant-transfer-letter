@@ -3,6 +3,7 @@
     public class Employee : BaseEntity
     {
         public long DepartmentId { get; set; }
+        public long Manage { get; set; }
         public string? FirstName { get; set; }
         public string? LastName { get; set; }
         public string? FullName { get; set; }

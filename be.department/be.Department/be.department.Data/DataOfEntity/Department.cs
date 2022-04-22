@@ -3,7 +3,7 @@
     public class Department : BaseEntity
     {
         public string? Name { get; set; }
-        public int PositionType { get; set; }
+        public PositionType PositionType { get; set; }
         public long CreatedById { get; set; }
         public long UpdatedById { get; set; }
         public DateTime CreatedOn { get; set; }
