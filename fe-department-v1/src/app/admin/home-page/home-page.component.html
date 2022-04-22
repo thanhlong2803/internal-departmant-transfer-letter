@@ -9,7 +9,7 @@
                     </div>
                     <div class="col-sm-4">
                         <button (click)="btlogout()" type="button" class="btn btn-danger add-new"> Logout</button>
-                        <button style="margin-right: 5px;" type="button" class="btn btn-info add-new"><i
+                        <button *ngIf="manageEmployee.postionId === admin" style="margin-right: 5px;" type="button" class="btn btn-info add-new"><i
                                 class="fa fa-plus"></i> Add New</button>
                     </div>
                 </div>
@@ -31,9 +31,9 @@
                         <td>{{employee.lastname}}</td>
                         <td>{{employee.postionName}}</td>
                         <td>
-                            <a class="add" title="Add" data-toggle="tooltip"><i class="material-icons"></i></a>
-                            <a class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons"></i></a>
-                            <a class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons"></i></a>
+                            <a  *ngIf="manageEmployee.postionId === admin" class="add" title="Add" data-toggle="tooltip"><i class="material-icons"></i></a>
+                            <a  class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons"></i></a>
+                            <a *ngIf="manageEmployee.postionId === admin" class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons"></i></a>
                         </td>
                     </tr>
                 </tbody>
