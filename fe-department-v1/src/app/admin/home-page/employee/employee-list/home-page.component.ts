@@ -40,6 +40,10 @@ export class HomePageComponent {
         this.router.navigate(['/login']);
     }
 
+    btCreateEmployee() {
+        this.router.navigate(['/employee-create']);
+    }
+
     private getAllEmployeeOfDepartment(employeeId: number, departmentId: number) {
         this.EmployeeService.getAllEmployeeOfDepartment(employeeId, departmentId)
             .pipe(first())
