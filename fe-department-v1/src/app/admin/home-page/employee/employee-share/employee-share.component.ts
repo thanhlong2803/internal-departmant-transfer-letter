@@ -1,8 +1,10 @@
 import { Component } from '@angular/core';
 import { first } from 'rxjs/operators';
-import { Employee, EmployeeList } from 'src/app/fe.data/employee/employee.model';
+import { Department } from 'src/app/fe.data/department/department.model';
+import { CreateEmployee, Employee, EmployeeList } from 'src/app/fe.data/employee/employee.model';
 import { AuthenticationService } from 'src/app/fe.services/authentication/authentication.service';
-import { EmployeeService } from 'src/app/fe.services/employee/employee.service';
+import { DepartmentService } from 'src/app/fe.services/department/department.service';
+
 
 @Component({
     selector: 'app-employee-share',
@@ -11,29 +13,31 @@ import { EmployeeService } from 'src/app/fe.services/employee/employee.service';
 })
 
 export class EmployeeShareComponent {
-    public manageEmployee = {} as Employee;
-    public employeeList: Array<EmployeeList> = [];
+    public infoAdmin = {} as Employee;
+    public employee = {} as CreateEmployee;
+    public departments = new Array<Department>();
+
     constructor(private authenticationService: AuthenticationService,
-        private EmployeeService: EmployeeService
+        private departmentService: DepartmentService
     ) { }
 
     ngOnInit() {
-        this.manageEmployee = this.authenticationService.getItemUser();
-        if (this.manageEmployee !== undefined && this.manageEmployee !== null) {
-            this.getAllEmployeeOfDepartment(this.manageEmployee.id, this.manageEmployee.departmentId);
-        }
+        this.infoAdmin = this.authenticationService.getItemUser();
+        this.getDataDepartment();
     }
 
-    private getAllEmployeeOfDepartment(employeeId: number, departmentId: number) {
-        this.EmployeeService.getAllEmployeeOfDepartment(employeeId, departmentId)
+    getDataDepartment() {
+        this.departmentService.getAllDepartment()
             .pipe(first())
             .subscribe(
-                data => {
-                    this.employeeList = data;
-                },
-                error => {
+                departments => {
+                 this.departments = departments;                 
+                }
+            );
+    }
 
-                });
+    getShareData(): CreateEmployee {
+        return this.employee;
     }
 
 }

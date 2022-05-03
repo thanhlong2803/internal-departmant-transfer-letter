@@ -1,6 +1,6 @@
 ﻿using be.Data;
 using be.Service;
-
+using be.Data.Model;
 namespace be.Services
 {
     public class DepartmentService : IDepartmentService
@@ -15,10 +15,16 @@ namespace be.Services
 
         #region Get or Create or Update or Delete for department
 
-        public List<Department> GetAllDepartments()
+        public List<DepartmentResponse> GetAllDepartments()
         {
-            var getAllDepartments = _departmentRepository.GetAllDepartment();
-            return getAllDepartments;
+            var getAllDepartmentEntitys = _departmentRepository.GetAllDepartment();
+            var departmentResponses = getAllDepartmentEntitys.Select(x => new DepartmentResponse
+            {
+                Id = x.Id,
+                DepartmentName = x.Name,
+                PostionId = x.PositionType
+            }) ;
+            return departmentResponses.ToList();
         }
 
         public void CreateDepartment(Department department)

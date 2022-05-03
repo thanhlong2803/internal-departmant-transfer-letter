@@ -1,6 +1,7 @@
 using be.Services;
 using Microsoft.AspNetCore.Mvc;
 using be.Data;
+using be.Data.Model;
 
 namespace be.Department.Controllers
 {
@@ -15,13 +16,11 @@ namespace be.Department.Controllers
             _departmentService = departmentService;
         }
 
-        [HttpGet(Name = "GetAllDepartment")]
-        public ActionResult<List<be.Data.Department>> GetAllDepartment()
+        [HttpGet("GetAllDepartment")]
+        public ActionResult<List<DepartmentResponse>> GetAllDepartment()
         {
             var getAllDepartment = _departmentService.GetAllDepartments();
             return Ok(getAllDepartment);
         }
-
-
     }
 }

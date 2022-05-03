@@ -30,6 +30,23 @@ export class EmployeeList {
     ) { }
 }
 
+export class CreateEmployee {
+    constructor(
+        public id: number,
+        public firstname: string = "",
+        public lastname: string = "",
+        public email: string = "",
+        public fullname: string = "",
+        public password: string = "",
+        public confirmPassword: string = "",
+        public active: boolean = false, 
+        public departmentId: number,
+        
+        public postionName: string = "",
+        public postionId: number
+    ) { }
+}
+
 export enum PositionType {
     Admin = 1,
     Nember = 2

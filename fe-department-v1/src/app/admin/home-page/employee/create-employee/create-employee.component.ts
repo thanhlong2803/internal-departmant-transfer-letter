@@ -1,10 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
-import { first } from 'rxjs/operators';
-import { Employee, EmployeeList, PositionType } from 'src/app/fe.data/employee/employee.model';
-import { AlertService } from 'src/app/fe.services/alert.service';
-import { AuthenticationService } from 'src/app/fe.services/authentication/authentication.service';
-import { EmployeeService } from 'src/app/fe.services/employee/employee.service';
+import { EmployeeShareComponent } from '../employee-share/employee-share.component';
 
 @Component({
     selector: 'app-create-employee',
@@ -13,21 +9,19 @@ import { EmployeeService } from 'src/app/fe.services/employee/employee.service';
 })
 
 export class CreateEmployeeComponent {
-    currentUser: any;
-    public manageEmployee = {} as Employee;
-    public employeeList: Array<EmployeeList> = [];
-
-    admin: number = PositionType.Admin;
-    nember: number = PositionType.Nember;
-
+    @ViewChild("employeeShareComponent") employeeShare!: EmployeeShareComponent;
     constructor(
-        private router: Router    ) { }
+        private router: Router) { }
 
     ngOnInit() {
-       
+
     }
- 
-    backToList(){
+
+    createEmployee() {
+       console.log(this.employeeShare.getShareData());
+    }
+
+    backToList() {
         this.router.navigate(['/']);
-    }   
+    }
 }

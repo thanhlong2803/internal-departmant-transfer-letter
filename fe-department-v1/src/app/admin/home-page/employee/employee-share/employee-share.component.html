@@ -4,10 +4,10 @@
             <div class="table-title">
                 <div class="row">
                     <div class="col-sm-12">
-                        <h2><span>Department name: </span> <strong>{{manageEmployee.departmentName}}</strong> Details
+                        <h2><span>Department name: </span> <strong>{{infoAdmin.departmentName}}</strong> Details
                             For Department </h2>
-                        <span>Employee name: </span> <strong>{{manageEmployee.fullName}}</strong> <span> Position name :
-                        </span> <strong> {{manageEmployee.postionName}}</strong>
+                        <span>Employee name: </span> <strong>{{infoAdmin.fullName}}</strong> <span> Position name :
+                        </span> <strong> {{infoAdmin.postionName}}</strong>
                     </div>
 
                 </div>
@@ -23,7 +23,8 @@
                                 <div class="col-md-6">
                                     <div class="md-form mb-2">
                                         <label for="name" class="">First name</label>
-                                        <input type="text" id="name" name="name" class="form-control">
+                                        <input [ngModelOptions]="{standalone: true}" [(ngModel)]="employee.firstname" type="text" id="name" name="name"
+                                            class="form-control">
                                     </div>
                                 </div>
                                 <!--Grid column-->
@@ -32,7 +33,7 @@
                                 <div class="col-md-6">
                                     <div class="md-form mb-2">
                                         <label for="name" class="">Last name</label>
-                                        <input type="text" id="name" name="name" class="form-control">
+                                        <input [ngModelOptions]="{standalone: true}" [(ngModel)]="employee.lastname" type="text" id="name" name="name" class="form-control">
                                     </div>
                                 </div>
                                 <!--Grid column-->
@@ -43,7 +44,7 @@
                                 <div class="col-md-6">
                                     <div class="md-form mb-2">
                                         <label for="name" class="">Full name</label>
-                                        <input type="text" id="name" name="name" class="form-control">
+                                        <input [ngModelOptions]="{standalone: true}" [(ngModel)]="employee.fullname" type="text" id="name" name="name" class="form-control">
                                     </div>
                                 </div>
                                 <!--Grid column-->
@@ -52,7 +53,7 @@
                                 <div class="col-md-6">
                                     <div class="md-form mb-2">
                                         <label for="name" class="">Email</label>
-                                        <input type="text" id="name" name="name" class="form-control">
+                                        <input [ngModelOptions]="{standalone: true}"  type="text" [(ngModel)]="employee.email" id="name" name="name" class="form-control">
                                     </div>
                                 </div>
                                 <!--Grid column-->
@@ -60,7 +61,7 @@
                                 <div class="col-md-6">
                                     <div class="md-form mb-2">
                                         <label for="name" class="">Password</label>
-                                        <input type="password" id="name" name="name" class="form-control">
+                                        <input  [ngModelOptions]="{standalone: true}" [(ngModel)]="employee.password" type="password" id="name" name="name" class="form-control">
                                     </div>
                                 </div>
                                 <!--Grid column-->
@@ -69,30 +70,26 @@
                                 <div class="col-md-6">
                                     <div class="md-form mb-2">
                                         <label for="name" class="">Confrim Password</label>
-                                        <input type="password" id="name" name="name" class="form-control">
+                                        <input [ngModelOptions]="{standalone: true}"  [(ngModel)]="employee.confirmPassword" type="password" id="name" name="name" class="form-control">
                                     </div>
                                 </div>
                                 <!--Grid column-->
 
-
                                 <!--Grid column Password-->
                                 <div class="col-md-6">
                                     <div class="md-form mb-2">
-                                        <select>
-                                            <option selected>Department</option>
-                                            <option>combobox 1</option>
-                                            <option>combobox 2</option>
-                                            <option>combobox 3</option>
+                                        <select  class="form-control" [ngModelOptions]="{standalone: true}"
+                                         [(ngModel)]="employee.departmentId">                                          
+                                            <option *ngFor="let item of departments" >{{item.departmentName}}-{{item.postionName}} </option>                                         
                                         </select>
                                     </div>
                                 </div>
                                 <!--Grid column-->
 
-
                                 <!--Grid column Password-->
                                 <div class="col-md-6">
                                     <div class="md-form mb-2">
-                                        <input type="checkbox" class="ml-2" name="isAccepted" /> Active
+                                        <input [ngModelOptions]="{standalone: true}" [(ngModel)]="employee.active" type="checkbox" class="ml-2" name="isAccepted" /> Active
                                     </div>
                                 </div>
                                 <!--Grid column-->
@@ -100,18 +97,18 @@
                             </div>
                         </form>
 
-                        <div class="container" class="mt-10">
+                        <!-- <div class="container" class="mt-10">
                             <div class="row">
                                 <div><strong style="font-size: 30px;">Send file many Department</strong></div>
                                 <table class="table table-bordered">
                                     <thead>
                                         <tr>
                                             <th [width]="50">Choice</th>
-                                            <th [width]="50">Department</th>
+                                            <th [width]="50">Department name</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <!-- <tr *ngFor="let employee of employeeList">
+                                        <tr *ngFor="let employee of employeeList">
                                             <td>{{employee.email}}</td>
                                             <td>{{employee.firstname}}</td>
                                             <td>{{employee.lastname}}</td>
@@ -123,11 +120,11 @@
                                                 <a *ngIf="manageEmployee.postionId === admin" class="delete" title="Delete"
                                                     data-toggle="tooltip"><i class="material-icons"></i></a>
                                             </td>
-                                        </tr> -->
+                                        </tr>
                                     </tbody>
                                 </table>
                             </div>
-                        </div>
+                        </div> -->
 
                     </div>
                     <!--Grid column-->
