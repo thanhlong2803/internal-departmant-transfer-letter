@@ -1,6 +1,7 @@
 using be.Services;
 using Microsoft.AspNetCore.Mvc;
 using be.Data;
+using be.Data.Model.EmployeeModel;
 
 namespace be.Department.Controllers
 {
@@ -16,10 +17,24 @@ namespace be.Department.Controllers
         }
 
         [HttpGet("GetAllEmployeeInDepartment")]
-        public ActionResult<List<be.Data.Department>> GetAllEmployeeInDepartment(long employeeId, long departmentId)
+        public ActionResult<List<EmployeeResponse>> GetAllEmployeeInDepartment(long employeeId, long departmentId)
         {
             var getAllEmployeeByDepartments = _employeeService.GetEmployeeByDepartmentId(employeeId, departmentId);
             return Ok(getAllEmployeeByDepartments);
+        }
+
+        [HttpPost("CreateEmployee")]
+        public ActionResult<List<be.Data.Department>> CreateEmployee(Employee employee)
+        {
+            //var getAllEmployeeByDepartments = _employeeService.GetEmployeeByDepartmentId(employeeId, departmentId);
+            return Ok();
+        }
+
+        [HttpPost("EditEmployee")]
+        public ActionResult<List<be.Data.Department>> EditEmployee(Employee employee)
+        {
+            //var getAllEmployeeByDepartments = _employeeService.GetEmployeeByDepartmentId(employeeId, departmentId);
+            return Ok();
         }
     }
 }

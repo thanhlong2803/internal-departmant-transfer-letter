@@ -23,8 +23,8 @@
                                 <div class="col-md-6">
                                     <div class="md-form mb-2">
                                         <label for="name" class="">First name</label>
-                                        <input [ngModelOptions]="{standalone: true}" [(ngModel)]="employee.firstname" type="text" id="name" name="name"
-                                            class="form-control">
+                                        <input [ngModelOptions]="{standalone: true}" [(ngModel)]="employee.firstname"
+                                            type="text" id="name" name="name" class="form-control">
                                     </div>
                                 </div>
                                 <!--Grid column-->
@@ -33,7 +33,8 @@
                                 <div class="col-md-6">
                                     <div class="md-form mb-2">
                                         <label for="name" class="">Last name</label>
-                                        <input [ngModelOptions]="{standalone: true}" [(ngModel)]="employee.lastname" type="text" id="name" name="name" class="form-control">
+                                        <input [ngModelOptions]="{standalone: true}" [(ngModel)]="employee.lastname"
+                                            type="text" id="name" name="name" class="form-control">
                                     </div>
                                 </div>
                                 <!--Grid column-->
@@ -44,7 +45,8 @@
                                 <div class="col-md-6">
                                     <div class="md-form mb-2">
                                         <label for="name" class="">Full name</label>
-                                        <input [ngModelOptions]="{standalone: true}" [(ngModel)]="employee.fullname" type="text" id="name" name="name" class="form-control">
+                                        <input [ngModelOptions]="{standalone: true}" [(ngModel)]="employee.fullname"
+                                            type="text" id="name" name="name" class="form-control">
                                     </div>
                                 </div>
                                 <!--Grid column-->
@@ -53,7 +55,8 @@
                                 <div class="col-md-6">
                                     <div class="md-form mb-2">
                                         <label for="name" class="">Email</label>
-                                        <input [ngModelOptions]="{standalone: true}"  type="text" [(ngModel)]="employee.email" id="name" name="name" class="form-control">
+                                        <input [ngModelOptions]="{standalone: true}" type="text"
+                                            [(ngModel)]="employee.email" id="name" name="name" class="form-control">
                                     </div>
                                 </div>
                                 <!--Grid column-->
@@ -61,7 +64,8 @@
                                 <div class="col-md-6">
                                     <div class="md-form mb-2">
                                         <label for="name" class="">Password</label>
-                                        <input  [ngModelOptions]="{standalone: true}" [(ngModel)]="employee.password" type="password" id="name" name="name" class="form-control">
+                                        <input [ngModelOptions]="{standalone: true}" [(ngModel)]="employee.password"
+                                            type="password" id="name" name="name" class="form-control">
                                     </div>
                                 </div>
                                 <!--Grid column-->
@@ -70,7 +74,9 @@
                                 <div class="col-md-6">
                                     <div class="md-form mb-2">
                                         <label for="name" class="">Confrim Password</label>
-                                        <input [ngModelOptions]="{standalone: true}"  [(ngModel)]="employee.confirmPassword" type="password" id="name" name="name" class="form-control">
+                                        <input [ngModelOptions]="{standalone: true}"
+                                            [(ngModel)]="employee.confirmPassword" type="password" id="name" name="name"
+                                            class="form-control">
                                     </div>
                                 </div>
                                 <!--Grid column-->
@@ -78,9 +84,11 @@
                                 <!--Grid column Password-->
                                 <div class="col-md-6">
                                     <div class="md-form mb-2">
-                                        <select  class="form-control" [ngModelOptions]="{standalone: true}"
-                                         [(ngModel)]="employee.departmentId">                                          
-                                            <option *ngFor="let item of departments" >{{item.departmentName}}-{{item.postionName}} </option>                                         
+                                        <select class="form-control" [ngModelOptions]="{standalone: true}"
+                                            [(ngModel)]="employee.departmentId">
+                                            <option *ngFor="let item of departments"
+                                                (ngOnChange)="selectDepartment()">
+                                                {{item.departmentName}}-{{item.postionName}} </option>
                                         </select>
                                     </div>
                                 </div>
@@ -89,7 +97,8 @@
                                 <!--Grid column Password-->
                                 <div class="col-md-6">
                                     <div class="md-form mb-2">
-                                        <input [ngModelOptions]="{standalone: true}" [(ngModel)]="employee.active" type="checkbox" class="ml-2" name="isAccepted" /> Active
+                                        <input [ngModelOptions]="{standalone: true}" [(ngModel)]="employee.active"
+                                            type="checkbox" class="ml-2" name="isAccepted" /> Active
                                     </div>
                                 </div>
                                 <!--Grid column-->

@@ -35,7 +35,9 @@ export class EmployeeShareComponent {
                 }
             );
     }
-
+    selectDepartment(){
+        
+    }
     getShareData(): CreateEmployee {
         return this.employee;
     }
